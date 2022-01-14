@@ -51,12 +51,12 @@ class TestTriangle:
     )
     def test_triangles_run_with_valid_params(self, run_triangles, sides, results):
         """
-        Test Case: Triangles output for valid parameters
+        Test Case: triangles output triangle type for valid input parameters
         Steps:
-        1. Run triangles program with valid parameters
+        1. Run triangles program with valid sides parameters (eg 1, 3, 123)
         2. Check program's output
         Expected result:
-        * For each valid parameter set program outputs triangle type according to side length
+        * For each valid parameters set program outputs triangle type according to side length
         """
         ret = run_triangles(sides)
         
@@ -75,7 +75,7 @@ class TestTriangle:
             ([], "error: the following arguments are required: sidex, sidey, sidez")
         ],
     )
-    def test_triangles_run_with_invalid_params_throws_error(self, run_triangles, sides, error_text):
+    def test_triangles_run_with_invalid_params_outputs_error_message(self, run_triangles, sides, error_text):
         """
         Test Case: Triangles output error for invalid parameters
         Steps:
