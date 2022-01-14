@@ -71,7 +71,8 @@ class TestTriangle:
             (["gfhfg", 4.5, 5.7], "invalid int value"),
             ([0, 3, 6], "Triangle has invalid sides!"),
             ([-7, -2, 1], "Triangle has invalid sides!"),
-            ([4, 5], "error: the following arguments are required: sidez")
+            ([4, 5], "error: the following arguments are required: sidez"),
+            ([], "error: the following arguments are required: sidex, sidey, sidez")
         ],
     )
     def test_triangles_run_with_invalid_params_throws_error(self, run_triangles, sides, error_text):
