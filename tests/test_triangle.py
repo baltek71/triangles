@@ -49,7 +49,7 @@ class TestTriangle:
             ([4, 4, 4], ["isosceles", "equilateral"]),
         ],
     )
-    def test_triangle_run_with_valid_params(self, run_triangles, sides, results):
+    def test_triangles_run_with_valid_params(self, run_triangles, sides, results):
         """
         Test Case: Triangles output for valid parameters
         Steps:
@@ -69,10 +69,12 @@ class TestTriangle:
         [
             ([1.7, 3, 123], "invalid int value"),
             (["gfhfg", 4.5, 5.7], "invalid int value"),
+            ([0, 3, 6], "Triangle has invalid sides!"),
+            ([-7, -2, 1], "Triangle has invalid sides!"),
             ([4, 5], "error: the following arguments are required: sidez")
         ],
     )
-    def test_triangle_run_with_invalid_params_throws_error(self, run_triangles, sides, error_text):
+    def test_triangles_run_with_invalid_params_throws_error(self, run_triangles, sides, error_text):
         """
         Test Case: Triangles output error for invalid parameters
         Steps:

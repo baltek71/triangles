@@ -23,7 +23,7 @@ class Triangle:
 
             print(f"Triangle is {', '.join(ttype for ttype in traingle_types)}")
         else:
-            print("Triangle has invalid values!")
+            raise ValueError("Triangle has invalid sides!")
 
 def main():
     parser = argparse.ArgumentParser(description='Create your own triangle')

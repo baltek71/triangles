@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='triangles',
-    version='0.0.9',
+    version='0.1.0',
     py_modules=['triangles'],
     packages=find_packages(),
     entry_points={
