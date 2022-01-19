@@ -12,9 +12,13 @@ class Triangle:
     def __post_init__(self):
         if self.x > 0 and self.y > 0 and self.z > 0:
             traingle_types: List[str] = []
+
+            if not (self.x + self.y > self.z and self.y + self.z > self.x and self.x + self.z > self.y):
+                raise ValueError("Invalid triangle sides lenght!")
+
             if self.x == self.y == self.z:
                 traingle_types.append("equilateral")
-            elif self.x != self.y != self.z:
+            elif self.x != self.y and self.y != self.z and self.x != self.z:
                 traingle_types.append("scalene")
             
             sides = asdict(self).values()

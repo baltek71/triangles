@@ -44,7 +44,8 @@ class TestTriangle:
 
     @pytest.mark.parametrize("sides, results", 
         [
-            ([1, 3, 123], ["scalene"]), 
+            ([7, 4, 4], ["isosceles"]),
+            ([8, 5, 4], ["scalene"]),
             ([2, 8, 8], ["isosceles"]),
             ([4, 4, 4], ["isosceles", "equilateral"]),
         ],
@@ -68,6 +69,7 @@ class TestTriangle:
     @pytest.mark.parametrize("sides, error_text", 
         [
             ([1.7, 3, 123], "invalid int value"),
+            ([1, 2, 132], "Invalid triangle sides lenght!"),
             (["gfhfg", 4.5, 5.7], "invalid int value"),
             ([0, 3, 6], "Triangle has invalid sides!"),
             ([-7, -2, 1], "Triangle has invalid sides!"),
